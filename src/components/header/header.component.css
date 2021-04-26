@@ -1,0 +1,19 @@
+header {
+    width: 100%;
+    background-color: beige;
+    color: #000;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: .6rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 .2rem;
+}
+nav ul li a {
+    padding: .75rem 1.2rem;
+}
