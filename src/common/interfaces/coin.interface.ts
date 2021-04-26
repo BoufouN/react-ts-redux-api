@@ -1,5 +1,8 @@
 export interface Coin {
-    id: string,
-    title: string,
-    icon: string
+    id: string
+    symbol: string
+    name: string
+    image: string
+    current_price: string
+    ath_change_percentage: string
 }

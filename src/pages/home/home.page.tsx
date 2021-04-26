@@ -1,25 +1,18 @@
 import React from 'react';
-import { Coin } from '../../common/interfaces/coin.interface';
-import CoinsGrid from '../../components/coins-grid/coins-grid.component';
+
+import {useActions} from "../../redux/actions/all.actions";
+import {ActionsProvider} from "../../contexts/actions.context";
+import CoinsGrid from '../../components/coins-grid/coins-grid.component';   
 
 const Home: React.FC = () => {
-    const coins: Coin[] = [
-        {
-            id: '1',
-            title: 'Coin 1',
-            icon: 'AAAAA'
-        },
-        {
-            id: '2',
-            title: 'Coin 2',
-            icon: 'BBBBB'
-        }
-    ]
+    const actions = useActions()
 
     return (
-        <div className="home">
-            <CoinsGrid coins={coins} />
-        </div>
+        <ActionsProvider value={actions}>
+            <div className="home">
+                <CoinsGrid />
+            </div>
+        </ActionsProvider>
     )
 }
 
